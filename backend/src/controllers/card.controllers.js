@@ -4,6 +4,8 @@ import { Card } from "../models/cards.model.js";
 export const getAllCards = async (req,res) => {
     try {
         const cards = await Card.find();
+        console.log( cards);
+        
         res.status(200).json({ message: 'successfully fetched all data.', card: cards});
     } catch (error) {
         res.status(500).json({ message: error.message });
