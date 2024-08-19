@@ -1,5 +1,5 @@
 import express from "express";
-import { createNewCard, getAllCards, getSpecficCard } from "../controllers/card.controllers.js";
+import { createNewCard, getAllCards, getSpecificCard } from "../controllers/card.controllers.js";
 
 const cardRouter = express.Router()
 
@@ -9,7 +9,7 @@ cardRouter.post('/cards', createNewCard)
 cardRouter.get('/cards', getAllCards)
 
 
-cardRouter.get('/cards/:title', getSpecficCard)
+cardRouter.get('/cards/:title', getSpecificCard)
 
 
 export default cardRouter;
